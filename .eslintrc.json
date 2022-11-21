@@ -1,10 +1,15 @@
 {
   "root": true,
-  "plugins": ["@typescript-eslint"],
+  "plugins": ["@typescript-eslint", "eslint-plugin-expect-type"],
+  "parserOptions": {
+    // Required by eslint-plugin-expect-type.
+    "project": "./tsconfig.json"
+  },
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "prettier"
+    "prettier",
+    "plugin:eslint-plugin-expect-type/recommended"
   ],
   // Change "warn" rules in @typescript-eslint/recommended to either "off" or "error".
   "rules": {
@@ -13,6 +18,7 @@
     "@typescript-eslint/no-unused-vars": [
       "error",
       { "ignoreRestSiblings": true }
-    ]
+    ],
+    "@typescript-eslint/ban-ts-comment": "off"
   }
 }

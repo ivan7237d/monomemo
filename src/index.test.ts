@@ -44,6 +44,15 @@ test("cache as Map", () => {
   `);
 });
 
-test("cache as WeakMap typechecks", () => {
+test("cache as Map types", () => {
+  // $ExpectType (from: number) => number
+  memoize((from: number) => from, new Map());
+});
+
+test("cache as WeakMap types", () => {
+  // @ts-expect-error
+  memoize((from: number) => from, new WeakMap());
+
+  // $ExpectType (from: [number]) => number
   memoize(([from]: [number]) => from, new WeakMap());
 });
