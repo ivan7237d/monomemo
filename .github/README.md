@@ -12,7 +12,15 @@ $ yarn add monomemo
 $ pnpm add monomemo
 ```
 
-## Memoizing results of functions that take a single argument
+## Usage
+
+The library provides a function `memoize`,
+
+```ts
+import memoize from "monomemo";
+```
+
+that takes two arguments: a function whose results we want to memoize, and which takes a single argument, and a map to be used as cache - any object such as `Map` and `WeakMap` that implements `MapLike` interface.
 
 ```ts
 // foo(1) will return 2, and add key 1, value 2 to the map, so that the
@@ -31,6 +39,7 @@ const foo = memoize(({ a }: { a: number }) => a + 1, new WeakMap());
 
 ```ts
 const undecorated = (x: number, y: { a: number }) => x + y.a;
+
 // We use WeakMap in the outer call so that the Maps created in the inner call
 // would be garbage-collected as soon as `{ a: number }` objects are no longer
 // referenced.
@@ -38,6 +47,7 @@ const decorated = memoize(
   (y: { a: number }) => memoize((x: number) => undecorated(x, y), new Map()),
   new WeakMap()
 );
+
 const withRestoredSignature = (x: number, y: { a: number }) => decorated(y)(x);
 ```
 
