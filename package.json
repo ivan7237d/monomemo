@@ -1,8 +1,8 @@
 {
-  "name": "umemo",
+  "name": "monomemo",
   "version": "1.0.0",
   "description": "A memoization utility",
-  "repository": "https://github.com/ivan7237d/umemo.git",
+  "repository": "https://github.com/ivan7237d/monomemo.git",
   "license": "MIT",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",

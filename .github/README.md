@@ -1,15 +1,15 @@
-# UMemo
+# Monomemo
 
 A memoization utility.
 
 ## Installation
 
 ```bash
-$ npm install umemo
+$ npm install monomemo
 # or
-$ yarn add umemo
+$ yarn add monomemo
 # or
-$ pnpm add umemo
+$ pnpm add monomemo
 ```
 
 ## Memoizing results of functions that take a single argument
@@ -43,4 +43,4 @@ const withRestoredSignature = (x: number, y: { a: number }) => decorated(y)(x);
 
 ---
 
-[Contributing guidelines](https://github.com/ivan7237d/umemo/blob/master/.github/CONTRIBUTING.md)
+[Contributing guidelines](https://github.com/ivan7237d/monomemo/blob/master/.github/CONTRIBUTING.md)
