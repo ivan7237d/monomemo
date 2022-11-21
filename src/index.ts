@@ -9,6 +9,7 @@ interface MapLike<K, V> {
  * are stored in a Map-like object provided as the second argument (a Map,
  * a WeakMap, or a custom object).
  */
+// We use `Cache extends` to prevent TS from inferring `To` as `any`.
 export default <From, To, Cache extends MapLike<From, To>>(
     project: (from: From) => To,
     cache: Cache

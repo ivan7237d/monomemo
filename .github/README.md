@@ -15,8 +15,8 @@ $ pnpm add umemo
 ## Memoizing results of functions that take a single argument
 
 ```ts
-// foo(1) will return 2, and add key 1, value 2 to the map, to be used for
-// future invocations.
+// foo(1) will return 2, and add key 1, value 2 to the map, so that the
+// next time foo is called the same argument, we will use the cached result.
 const foo = memoize((a: number) => a + 1, new Map());
 
 // Typechecking error, because a WeakMap cannot have numbers as keys.
