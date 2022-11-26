@@ -1,6 +1,6 @@
 {
   "name": "monomemo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A memoization utility",
   "repository": "https://github.com/ivan7237d/monomemo.git",
   "license": "MIT",
