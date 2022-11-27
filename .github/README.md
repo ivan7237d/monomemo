@@ -5,11 +5,19 @@ A memoization utility.
 ## Installation
 
 ```bash
-$ npm install monomemo
-# or
-$ yarn add monomemo
-# or
-$ pnpm add monomemo
+npm install monomemo
+```
+
+or
+
+```bash
+yarn add monomemo
+```
+
+or
+
+```bash
+pnpm add monomemo
 ```
 
 ## Usage
