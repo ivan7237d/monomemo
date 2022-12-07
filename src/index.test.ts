@@ -1,4 +1,4 @@
-import memoize from ".";
+import { memoize } from ".";
 
 test("cache as Map", () => {
   const project = jest.fn((value) => value + 1);

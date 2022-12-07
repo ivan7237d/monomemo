@@ -25,7 +25,7 @@ pnpm add monomemo
 The library provides a function `memoize`,
 
 ```ts
-import memoize from "monomemo";
+import { memoize } from "monomemo";
 ```
 
 that takes two arguments: a function whose results we want to memoize, and which takes a single argument, and a map to be used as cache - any object such as `Map` and `WeakMap` that implements `MapLike` interface.

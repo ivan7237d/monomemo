@@ -10,7 +10,8 @@ export interface MapLike<Key, Value> {
  * a WeakMap, or a custom object).
  */
 // We use `Cache extends` to prevent TS from inferring `To` as `any`.
-export default <From, To, Cache extends MapLike<From, To>>(
+export const memoize =
+  <From, To, Cache extends MapLike<From, To>>(
     project: (from: From) => To,
     cache: Cache
   ): ((from: From) => To) =>

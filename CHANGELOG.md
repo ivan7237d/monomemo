@@ -1,3 +1,5 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+## 2.0.0 (2022-12-06)
+
+Switch to named export.
